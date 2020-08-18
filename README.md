@@ -9,5 +9,5 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
  - #### [3-Palindrome Answer](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/3%20Palindrome/3Palindrome_solution.py)
 
 #### Elections, I have actually used a straight forward native approach of countaing the neutrals and handling them with loops
- - #### [Elections Question]()
- - #### [Election Solution] ()
+ - #### [Elections Question](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/elections/question.md)
+ - #### [Election Solution](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/elections/elections.py)
