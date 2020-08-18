@@ -13,5 +13,5 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
  - #### [Election Solution](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/elections/elections_solution.py)
 
 #### Tennis Court, I have come up with a solution that is accurate to the mark, need some text modifications in the output, and please feel free to raise pull requests for this question,
- - #### [Tennis Court Question]()
- - #### [Tennis Court Solution]()
+ - #### [Tennis Court Question](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/tennis_court/question.md)
+ - #### [Tennis Court Solution](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/tennis_court/tennis_court.py)
