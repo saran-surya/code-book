@@ -67,8 +67,9 @@ Example 1
 Input
 
 14
---AB--AB---A--
+\--AB--AB---A--
 Output
+<br/>
 
 A
 Explanation:
