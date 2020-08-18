@@ -48,9 +48,9 @@ Second line contains characters {-, A, B}, in which denotes
 
 - A = voter who is supporter of candidate A
 
--B = voter who is supporter of candidate B
+- B = voter who is supporter of candidate B
 
--- = neutral voter
+- \- = neutral voter
 
 Output
 
