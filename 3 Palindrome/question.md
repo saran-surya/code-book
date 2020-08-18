@@ -95,4 +95,4 @@ The other ways to split the given string into 3 palindromes are as follows -
 [aaaa, b, aaaal], [aa, aabaa, aal, etc.
 
 Since we want to minimize the length of the first palindromic substring using
-left to right processing, the correct way to split is [a, aaabaaa, al.
+left to right processing, the correct way to split is [a, aaabaaa, al].
