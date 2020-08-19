@@ -5,13 +5,10 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
 # The Approaches are all coded in PYTHON 3
 
 #### 3-Palindrome, I have tried my best approach to solve the question only by using recursion, and no loops
- - #### [3-Palindrome Question](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/3%20Palindrome/question.md)
- - #### [3-Palindrome Solution](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/3%20Palindrome/3Palindrome_solution.py)
+ - #### [3-Palindrome](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/3%20Palindrome)
 
 #### Elections, I have actually used a straight forward native approach of countaing the neutrals and handling them with loops
- - #### [Elections Question](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/elections/question.md)
- - #### [Election Solution](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/elections/elections_solution.py)
+ - #### [Election](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/elections)
 
 #### Tennis Court, I have come up with a solution that is accurate to the mark, need some text modifications in the output, and please feel free to raise pull requests for this question,
- - #### [Tennis Court Question](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/tennis_court/question.md)
- - #### [Tennis Court Solution](https://github.com/saran-surya/Codevita-2020-zone-2/blob/master/tennis_court/tennis_court.py)
+ - #### [Tennis Court](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/tennis_court)
