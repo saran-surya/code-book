@@ -12,3 +12,6 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
 
 #### Tennis Court, I have come up with a solution that is accurate to the mark, need some text modifications in the output, and please feel free to raise pull requests for this question,
  - #### [Tennis Court](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/tennis_court)
+
+#### String Merge, I have also followed a Naitive with a dynamic approach, Feel free to raise pull requests for performance issues and edge cases.
+ - #### [String Merge](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/string_merge)
