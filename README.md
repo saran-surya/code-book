@@ -21,3 +21,6 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
 
 #### Factor of 3, Followed a simple Permutation logic in order to reduce Time.  Feel free to raise pull requests for performance issues and edge cases.
  - #### [Factor of 3](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/factor_of_3)
+
+#### Even Odd, Followed a simple Permutation logic in order to reduce Time.  Feel free to raise pull requests for performance issues and edge cases.
+ - #### [Even Odd](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/even_odd)
