@@ -1,8 +1,12 @@
 def checkIfpossible():
+    maximum = -1
+    ind = -1
     for j in range(n):
         if (stack[-1]+array[j]) %3 != 0 and j not in indexes:
-            return j
-    return False
+            if maximum < array[j]:
+                maximum = array[j]
+                ind = j
+    return False if ind == -1 else ind
 
 def permute():
     i = 0
