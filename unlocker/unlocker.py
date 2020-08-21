@@ -80,31 +80,78 @@ import copy
 #             m1[row][abs(total - (index_y + skips))] = ref[index_x][index_y]
 #             return True
 
-def right(index_x, index_y, row, col, skips, flag = 'row'):
-    pass
-def down(index_x, index_y, row, col, skips, flag = 'col'):
-    pass
-def left(index_x, index_y, row, col, skips, flag = 'row'):
-    pass
-def top(index_x, index_y, row, col, skips, flag = 'col'):
-    pass
+def right(index_x, index_y, row, col, skips, max_row, max_col):
+    print('in right ---------------')
+    print('mrc', max_row, max_col)
+    tem = index_x + index_y + skips
+    print(tem)
+    if tem < total:
+        if tem < max_row:
+            m1[index_x][tem] = ref[index_x][index_y]
+        else:
+            return down(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
+    else:
+        m1[row][tem-total] = ref[index_x][index_y]
+def down(index_x, index_y, row, col, skips, max_row, max_col):
+    tem = index_x + index_y + skips
+    print(tem)
+    if tem < max_col:
+        if tem > col * 2:
+            tem -= col * 2
+        tem -= col
+        if tem >= row:
+            m1[tem][col] = ref[index_x][index_y]
+    else:
+        return left(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
+        
+def left(index_x, index_y, row, col, skips, max_row, max_col):
+    tem = index_x + index_y + skips
+    print('Tem', tem)
+    print('mrc', max_row, max_col)
+    if tem < max_row:
+        if tem > col*2:
+            tem -= col*2
+        if tem <= col:
+            tem = col - tem
+        else:
+            tem = col - (tem-col)
+        if tem >= row:
+            m1[col][tem] = ref[index_x][index_y]
+    else:
+        return top(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
+def top(index_x, index_y, row, col, skips, max_row, max_col):
+    tem = index_x + index_y + skips
+    print('Tem', tem)
+    print('mrc', max_row, max_col)
+    if tem < max_col:
+        if tem > col * 2:
+            tem -= col*2
+        if tem <= col:
+            tem = col - tem
+        else:
+            tem = col - (tem - col)
+        if tem >= row:
+            m1[tem][row] = ref[index_x][index_y]
+    else:
+        return right(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
 
-def clockwise(row, col, skips):
+def clockwise(row, col, skips, col_element, row_element):
+    # inverted row to column for better results
+    print(row_element, 'row element ------<')
+    print(col_element, 'col element <-----')
     print(row, col, 'row-col')
     for x in range(row, col+1):
         for y in range(row, col+1):
             if x == row:
                 print('first row', ref[x][y])
-                right(x, y, row, col, skips)
+                right(x, y, row, col, skips, row_element, col_element)
             elif y == col and x != row:
                 print('last column', ref[x][y])
-                down(x, y, row, col, skips)
+                # down(x, y, row, col, skips, row_element, col_element)
             elif y == row and x != col:
                 print('first column', ref[x][y])
-                top(x, y, row, col, skips)
             elif x == col:
                 print('last row', ref[x][y])
-                left(x, y, row, col, skips)
 
 m, n = map(int, input().split())
 m1 = []
@@ -125,13 +172,18 @@ rotate = 0
 
 while(i > 1 and j > 1):
     total = (i*j) - ((i-2)*(j-2))
+    col_element = i
+    row_element = j
     if total != rotations[rotate] and rotations[rotate] % total:
         if rotate % 2:
             print('clockwise')
+            # if rotations[rotate] > total:
+            #     rotations[rotate] = abs(total - rotations[rotate])
+            # clockwise(cur_row, end_col, rotations[rotate], i, j)
         else:
             if rotations[rotate] > total:
                 rotations[rotate] = abs(total - rotations[rotate])
-            clockwise(cur_row, end_col, rotations[rotate])
+            clockwise(cur_row, end_col, rotations[rotate], i, j)
             print('anti-clockwise')
     i -= 2
     j -= 2
