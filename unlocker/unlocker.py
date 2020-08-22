@@ -78,60 +78,66 @@ import copy
 #         print('************ right else ************')
 #         if abs(total - (index_y + skips)) <= col:
 #             m1[row][abs(total - (index_y + skips))] = ref[index_x][index_y]
-#             return True
+#    
+#          return True
+
+def tem_reducer(temp, col):
+    while(temp > col*2):
+        temp -= col*2
+    return temp
+
+def tem_1_reducer(temp, col):
+    while(temp > col):
+        temp -= col
+    return temp
+
 
 def right(index_x, index_y, row, col, skips, max_row, max_col):
-    print('in right ---------------')
+    print('element ====================== ', ref[index_x][index_y])
     print('mrc', max_row, max_col)
     tem = index_x + index_y + skips
     print(tem)
-    if tem < total:
-        if tem < max_row:
-            m1[index_x][tem] = ref[index_x][index_y]
-        else:
-            return down(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
+    if tem < max_row:
+        tem = tem_reducer(tem, col)
+        tem = tem_1_reducer(tem, col)
+        print('<------ right -------->', tem)
+        m1[row][col - (col - tem)] = ref[index_x][index_y]
     else:
-        m1[row][tem-total] = ref[index_x][index_y]
+        return down(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
 def down(index_x, index_y, row, col, skips, max_row, max_col):
+    print('element ====================== ', ref[index_x][index_y])
     tem = index_x + index_y + skips
     print(tem)
     if tem < max_col:
-        if tem > col * 2:
-            tem -= col * 2
-        tem -= col
-        if tem >= row:
-            m1[tem][col] = ref[index_x][index_y]
+        tem = tem_reducer(tem, col)
+        tem = tem_1_reducer(tem, col)
+        print('<------down------>', tem)
+        m1[col - (col - tem)][col] = ref[index_x][index_y]
     else:
         return left(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
         
 def left(index_x, index_y, row, col, skips, max_row, max_col):
+    print('element ====================== ', ref[index_x][index_y])
     tem = index_x + index_y + skips
     print('Tem', tem)
     print('mrc', max_row, max_col)
     if tem < max_row:
-        if tem > col*2:
-            tem -= col*2
-        if tem <= col:
-            tem = col - tem
-        else:
-            tem = col - (tem-col)
-        if tem >= row:
-            m1[col][tem] = ref[index_x][index_y]
+        tem = abs(index_x - index_y) + skips
+        tem = tem_reducer(tem, col)
+        tem = tem_1_reducer(tem, col)
+        m1[col][col-tem] = ref[index_x][index_y]
+        print('<---- left ---->', tem)
+
     else:
         return top(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
 def top(index_x, index_y, row, col, skips, max_row, max_col):
+    print('element ====================== ', ref[index_x][index_y])
     tem = index_x + index_y + skips
     print('Tem', tem)
     print('mrc', max_row, max_col)
     if tem < max_col:
-        if tem > col * 2:
-            tem -= col*2
-        if tem <= col:
-            tem = col - tem
-        else:
-            tem = col - (tem - col)
-        if tem >= row:
-            m1[tem][row] = ref[index_x][index_y]
+        tem = tem_reducer(tem, col)
+        print('<----- top ----->', tem)
     else:
         return right(index_x, index_y, row, col, skips, max_row + col_element - 1, max_col + row_element - 1)
 
@@ -147,7 +153,7 @@ def clockwise(row, col, skips, col_element, row_element):
                 right(x, y, row, col, skips, row_element, col_element)
             elif y == col and x != row:
                 print('last column', ref[x][y])
-                # down(x, y, row, col, skips, row_element, col_element)
+                # down(x, y, row, col, skips, row_element + col_element -1, col_element + row_element -1)
             elif y == row and x != col:
                 print('first column', ref[x][y])
             elif x == col:
@@ -183,6 +189,7 @@ while(i > 1 and j > 1):
         else:
             if rotations[rotate] > total:
                 rotations[rotate] = abs(total - rotations[rotate])
+            print(rotations[rotate])
             clockwise(cur_row, end_col, rotations[rotate], i, j)
             print('anti-clockwise')
     i -= 2
