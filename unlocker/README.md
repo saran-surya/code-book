@@ -61,15 +61,16 @@ Print unlocked matrix
 Examples
 Example 1
 Input
-
+```
 1 2
 3 4
 2
-
+```
 Output
-
+```
 4 3
 2 1
+```
 Explanation:
 
 There is only one layer. So, we have to rotate it in anti-clockwise direction with
@@ -78,17 +79,21 @@ There is only one layer. So, we have to rotate it in anti-clockwise direction wi
 
 Example 2
 Input
+```
 4 4
 1 2 3 4
 2 3 4 5
 2 4 5 6
 2 3 4 5
 2 2
+```
 Output
+```
 3 4 5 6
 2 5 4 5
 1 4 3 4
 2 2 2 3
+```
 
 Explanation:
 
