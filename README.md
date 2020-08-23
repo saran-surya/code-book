@@ -26,4 +26,4 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
  - #### [Even Odd](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/even_odd)
 
 #### Unlocker, I have followed a simple naive approach, They work good on given testcases and custom edge cases.  Feel free to raise pull requests for performance issues and edge cases.
- - #### [Even Odd](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/unlocker)
+ - #### [Unlocker](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/unlocker)
