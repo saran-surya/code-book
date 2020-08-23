@@ -1,5 +1,5 @@
 # Codevita-2020-zone-2 (Round-1)
-This repo containes my approach for solving the TCS codevita 2020 Zone - 2,
+This repo containes my approach for solving the TCS codevita 2020 Zone - 2 questions,
 # Note: This was created after the contest, and for reference, and sharing my ideas, And these questions are taken from online websites
 
 # The Approaches are all coded in PYTHON 3
