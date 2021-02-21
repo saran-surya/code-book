@@ -29,4 +29,4 @@ This repo containes my approach for solving the TCS codevita 2020 Zone - 2 quest
  - #### [Unlocker](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/unlocker)
 
 #### T-Rex and Theme park question.
- - #### [T-Rex in Theme Park](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/theme_park)
+ - #### [T-Rex in Theme Park](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/theme_park), I have completely used recursion for the path finding algorithm, and it is effective for all edge cases.
