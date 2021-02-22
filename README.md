@@ -1,5 +1,5 @@
 # Contains various programming problem solutions.
-## Mainly covers Dynamic programming, Greedy, Recursion
+- ## Mainly covers Dynamic programming, Greedy, Recursion
 
 
 # The Approaches are all coded in PYTHON 3
