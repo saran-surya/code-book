@@ -42,15 +42,12 @@ for i in range(r):
 
 tally = []
 movement(matrix, 0, 0)
-
-initial = tally[0]
+tally = tally[::-1]
+initial = tally[-1]
 for i in range(len(tally)):
-    if tally[i] == initial:
-        print(tally[i] + "R")
-    else:
-        temp = initial[:abs(len(tally[i])-len(tally[0]))]
-        if(temp == ''):
-            initial = tally[i]
-        temp += tally[i]
-        print(temp + "R")
+    temp = initial[:abs(len(tally[i])-len(initial))]
+    if(temp == ''):
+        initial = tally[i]
+    temp += tally[i]
+    print(temp + "R")
 
