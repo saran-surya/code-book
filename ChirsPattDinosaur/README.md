@@ -9,9 +9,9 @@ Output Description:
 The possible paths that Chris can take.
 
 Sample Input :
-3
-1 0 0
-1 0 1
-1 1 1
-Sample Output :
-DDRRR
+3 <br>
+1 0 0 <br>
+1 0 1 <br>
+1 1 1 <br>
+Sample Output : <br>
+DDRRR 
