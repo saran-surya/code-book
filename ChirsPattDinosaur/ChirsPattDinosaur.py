@@ -13,8 +13,6 @@ def movement(matrix, x, y, visited=[[]], right=True, down=True):
         temp = ''.join(visited[-1])
         tally.append(temp)
         visited.append([])
-        # for i in range(len(visited)):
-        #     visited.pop()
     elif visited[-1] != [] and visited[-1][-1] == "R":
         visited[-1].pop()
     visited[-1].append("D")
@@ -22,8 +20,6 @@ def movement(matrix, x, y, visited=[[]], right=True, down=True):
         temp = ''.join(visited[-1])
         tally.append(temp)
         visited.append([])
-        # for i in range(len(visited)):
-        #     visited.pop()
     elif visited[-1] != [] and visited[-1][-1] == "D":
         visited[-1].pop()
     # if(x == 0 and y == 0):
@@ -31,7 +27,6 @@ def movement(matrix, x, y, visited=[[]], right=True, down=True):
 
 
 r = int(input())
-# row count input
 matrix = []
 for i in range(r):
     matrix.append(list(map(int, input().split())))
