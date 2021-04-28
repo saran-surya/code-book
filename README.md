@@ -1,6 +1,9 @@
-## Contains solutions to programming questions asked in interviews / coding rounds
+## Contains solutions to programming questions asked in interviews / coding rounds.
+## Feel free to contribute, and if you like the repo kindly ***Star*** it 😉.
 ### Covers Dynamic programming, Greedy, Recursion.
-### The Approaches are all coded in PYTHON 3
+### The Approaches are all coded in PYTHON 3.
+
+
 
 1) #### 3-Palindrome, I have tried my best approach to solve the question only by using recursion, and no loops
    - #### [3-Palindrome](https://github.com/saran-surya/Codevita-2020-zone-2/tree/master/3%20Palindrome)
